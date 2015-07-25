@@ -33,6 +33,8 @@ def quick_sort(L,l,r):
 		pivot= partition(L,l,r)			
 		if pivot==l:
 			quick_sort(L,pivot+1,r)
+		elif pivot==r:
+			quick_sort(L,l,pivot-1)
 		else:
 			quick_sort(L,l,pivot-1)
 			quick_sort(L,pivot+1,r)
